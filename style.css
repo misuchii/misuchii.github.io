@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;    /* 去掉下划线 */
+  color: black;
+}
+
+body {
+  display: flex;
+}
+
+.pic {
+  margin-left: 40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;    /* 半径设为 50% */
+  margin-bottom: 30px;
+}
+
+.icongroup{
+  margin-top: 50px;
+  display: flex;
+}
+
+.icon {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar {
+  width: 30vw;
+  background-color: #f5edd9;
+  display: flex;
+  padding-left: 100px;
+  padding-top: 100px;
+  flex-direction: column;       /* 垂直排列内容 */
+  height: 100vh;                /* 占满整个屏幕高度 */
+}
+
+.sidebar h1{
+  font-size: 58px;
+  margin-bottom: 30px;
+}
+
+.sidebar p{
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.content {
+  width: 70vw;
+  padding: 200px;
+  background-color: #f5edd9;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.content section {
+  margin-bottom: 60px;
+}
+
+audio {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
