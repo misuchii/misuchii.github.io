@@ -6,55 +6,95 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class="spotlight"></div>
     <!--sidebar-->
     <div class="sidebar">
-        <img src="Airu.jpg" alt="none" class="pic">
+        <img src="bluesky-brands.svg" alt="none" class="pic">
         <h1>Hazel Jia</h1>
-        <p>Front End Learner</p>
+        <p>Web develop Learner</p>
         <a href="#about">About</a>
+        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
         <div class="icongroup">
             <a href="https://facebook.com" target="_blank">
-                <img src="facebook.png" alt="Facebook" class="icon">
+                <img src="facebook-brands-.svg" alt="Facebook" class="icon">
             </a>
             <a href="https://www.tiktok.com" target="_blank">
-                <img src="tiktok.png" alt="TikTok" class="icon">
+                <img src="discord-brands-.svg" alt="discord" class="icon">
             </a>
             <a href="https://www.google.com" target="_blank">
-                <img src="google.png" alt="Google" class="icon">
+                <img src="github-brands-.svg" alt="github" class="icon">
             </a>
         </div>
     </div>
 <!--    content-->
     <div class="content">
-        <section id="about">
+        <section id="about" class="about">
             <h2><span class="ball"></span>About me</h2>
-            <p>Placeholder</p>
-            <p>Placeholder</p>
-            <p>Placeholder</p>
-            <p>Placeholder</p>
-            <p>Placeholder</p>
-            <p>Placeholder</p>
-            <p>Placeholder</p>
+            <div class="poem">
+              <p>Somewhere between static and silence,</p>
+              <p>a signal hums — not loud, not clear,</p>
+              <p>but persistent, like an idea you forgot to name.</p>
+              <br />
+              <p>The system boots, slowly.</p>
+              <p>Numbers fall like dust.</p>
+              <p>Time loops, or maybe stutters.</p>
+              <p>We build without knowing why.</p>
+              <br />
+              <p>In empty corners, pixels whisper.</p>
+              <p>Across invisible grids, nothing moves —</p>
+              <p>and still, it all feels intentional.</p>
+              <br />
+              <p>Not real, not false.</p>
+              <p>Just here. Just blinking.</p>
+              <p>A sentence without a sender,</p>
+              <p>waiting for someone to scroll past.</p>
+            </div>
         </section>
-        <section id="skills">
+        <section id="education" class="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="circle"></div>
+                <div>
+
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills">
             <h2>Skills</h2>
-            <p>Placeholder</p>
+            <span>HTML</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%"></div>
+            </div>
+            <span>CSS</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%"></div>
+            </div>
+            <span>Javascript</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%"></div>
+            </div>
         </section>
-        <section id="projects" class="section">
+        <section id="projects" class="projects">
             <h2>Projects</h2>
             <div class="projectgroup">
-                <p class="project">a project here</p>
+                <div class="project">
+                    <a href="#">first project here</a>
+                    <p>This is a project describe</p>
+                </div>
+                <div class="project">
+                    <a href="#">second project here</a>
+                    <p>This is a project describe</p>
+                </div>
             </div>
-            <p>Placeholder</p>
         </section>
 
-        <section id="contact" class="section">
+        <section id="contact" class="contact" >
             <h2>Contact</h2>
             <p>Email:..</p>
+<!--           target blank open to new page, self this page-->
             <p>GitHub: <a href="#" target="_blank">link</a></p>
         </section>
         <audio controls autoplay loop>
@@ -62,4 +102,13 @@
     </audio>
     </div>
 </body>
+<script>
+  const spotlight = document.querySelector('.spotlight');
+
+  document.addEventListener('mousemove', (e) => {
+    spotlight.style.left = `${e.clientX}px`;
+    spotlight.style.top = `${e.clientY}px`;
+  });
+</script>
+
 </html>

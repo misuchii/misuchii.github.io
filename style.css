@@ -11,18 +11,59 @@ a {
 
 body {
   display: flex;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+p {
+  z-index: 50
 }
 
 .pic {
+  margin-top: 20px;
   margin-left: 40px;
   width: 150px;
   height: 150px;
-  border-radius: 50%;    /* 半径设为 50% */
-  margin-bottom: 30px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  width: 300px;
+  height: 540px;
+  padding-left: 10px;
+  display: flex;
+  margin-left: 100px;
+  margin-top: 100px;
+  flex-direction: column;
+  z-index: 15;
+}
+
+.sidebar h1{
+  padding-left: 20px;
+  font-size: 58px;
+  margin-bottom: 10px;
+}
+
+.sidebar p{
+  padding-left: 20px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.sidebar a{
+  font-size: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .icongroup{
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
 }
 
@@ -32,40 +73,126 @@ body {
   height: 40px;
 }
 
-.sidebar {
-  width: 30vw;
-  background-color: #f5edd9;
-  display: flex;
-  padding-left: 100px;
-  padding-top: 100px;
-  flex-direction: column;       /* 垂直排列内容 */
-  height: 100vh;                /* 占满整个屏幕高度 */
-}
-
-.sidebar h1{
-  font-size: 58px;
-  margin-bottom: 30px;
-}
-
-.sidebar p{
-  font-size: 28px;
-  margin-bottom: 30px;
+.icon:hover {
+  filter: brightness(1.4);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .content {
-  width: 70vw;
-  padding: 200px;
-  background-color: #f5edd9;
-  height: 100vh;
+  margin-left: 100px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  width: 800px;
   overflow-y: auto;
+  z-index: 15;
 }
 
-.content section {
+.about{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
   margin-bottom: 60px;
+}
+
+.poem{
+  font-size: 20px;
+}
+
+.education{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+}
+
+
+
+.skills{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+}
+
+.skills h2{
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 80%;
+  background-color: #ccc;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.progress {
+  height: 100%;
+  background-color: coral;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.projects {
+  margin-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.projectgroup{
+  margin-top: 10px;
+}
+
+.project{
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.project:hover{
+  border: 1px solid white;
+  background-color: white;
+}
+
+.contact{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 audio {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+/* spotlight：跟随鼠标的光圈 */
+.spotlight {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(0,0,0,0.9) 90%);
+  mix-blend-mode: lighten;
+  z-index: 5;
+  transform: translate(-50%, -50%);
 }
