@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="loading-overlay">
+    <div class="spinner">️<img src="cat.gif" alt=""></div>
+    </div>
+
+</div>
     <div class="spotlight"></div>
     <!--sidebar-->
     <div class="sidebar">
@@ -57,10 +62,19 @@
             <h2>Education</h2>
             <div class="timeline">
                 <div class="circle"></div>
-                <div>
-
+                <div class="lines">
+                    <p>2020-2024</p>
+                    <p>SZTU</p>
+                    <p>Computer Science</p>
+                </div>
+                <div class="circle"></div>
+                <div class="lines">
+                    <p>2024-now</p>
+                    <p>UWA</p>
+                    <p>IT</p>
                 </div>
             </div>
+
         </section>
         <section id="skills" class="skills">
             <h2>Skills</h2>
@@ -81,12 +95,10 @@
             <h2>Projects</h2>
             <div class="projectgroup">
                 <div class="project">
-                    <a href="#">first project here</a>
-                    <p>This is a project describe</p>
+                    <a href="project1.html" class="project-link">Party popper 🎉</a>
                 </div>
                 <div class="project">
-                    <a href="#">second project here</a>
-                    <p>This is a project describe</p>
+                    <a href="project2.html" class="project-link">likes❤️</a>
                 </div>
             </div>
         </section>
@@ -109,6 +121,12 @@
     spotlight.style.left = `${e.clientX}px`;
     spotlight.style.top = `${e.clientY}px`;
   });
+
+setTimeout(function () {
+  const overlay = document.getElementById("loading-overlay");
+  overlay.classList.add("fade-out");
+}, 5000); // 5 秒后触发
+
 </script>
 
 </html>
